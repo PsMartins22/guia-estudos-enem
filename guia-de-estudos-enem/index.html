@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Interativo ENEM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-3 sm:p-4 md:p-6 max-w-6xl">
+        <header class="text-center mb-6 md:mb-8">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">Guia Interativo ENEM <span class="text-2xl">🚀</span></h1>
+            <p class="text-md sm:text-lg text-slate-600 mt-2">Seu roteiro completo para brilhar na prova!</p>
+        </header>
+
+        <nav class="bg-white shadow-lg rounded-lg p-3 mb-6 md:mb-8 sticky top-2 z-50 nav-container">
+            <ul class="flex justify-start sm:justify-center gap-2">
+                <li><button data-target="intro" class="nav-button active w-full sm:w-auto px-4 py-2.5 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-blue-500 hover:text-white rounded-md">Introdução</button></li>
+                <li><button data-target="entendendo-enem" class="nav-button w-full sm:w-auto px-4 py-2.5 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-blue-500 hover:text-white rounded-md">Entendendo o ENEM</button></li>
+                <li><button data-target="como-estudar" class="nav-button w-full sm:w-auto px-4 py-2.5 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-blue-500 hover:text-white rounded-md">Como Estudar</button></li>
+                <li><button data-target="o-que-estudar" class="nav-button w-full sm:w-auto px-4 py-2.5 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-blue-500 hover:text-white rounded-md">O Que Estudar</button></li>
+                <li><button data-target="treinando-prova" class="nav-button w-full sm:w-auto px-4 py-2.5 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-blue-500 hover:text-white rounded-md">Treinando para Prova</button></li>
+                <li><button data-target="conclusao" class="nav-button w-full sm:w-auto px-4 py-2.5 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-blue-500 hover:text-white rounded-md">Conclusão</button></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="intro" class="content-section active">
+                <h2>Bem-vindo(a) ao seu Guia Completo para o ENEM!</h2>
+                <p>Retomar os estudos após um tempo pode ser um desafio, especialmente para um exame tão importante como o ENEM. Este guia interativo foi pensado para você, que busca um roteiro claro e prático para se preparar. Aqui, você encontrará desde o funcionamento da prova até dicas de estudo e os conteúdos mais cobrados, tudo organizado para facilitar sua jornada rumo ao sucesso.</p>
+                <p>Navegue pelas seções utilizando os botões acima para explorar cada etapa da sua preparação. Vamos juntos reacender seu foco e conquistar seus objetivos!</p>
+            </section>
+
+            <section id="entendendo-enem" class="content-section">
+                <h2>Entendendo o ENEM: Estrutura e Regras Essenciais</h2>
+                <p>Esta seção é fundamental para você que está retomando os estudos e precisa se familiarizar com todos os detalhes do ENEM. Aqui, você encontrará informações claras sobre a estrutura da prova, como os cadernos são organizados, o sistema de pontuação (TRI) e as regras essenciais do que pode ou não levar no dia do exame. Dominar esses aspectos é o primeiro passo para uma preparação tranquila e focada.</p>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    A Estrutura da Prova: Dias, Áreas e Cadernos
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <p>O ENEM é aplicado em dois domingos consecutivos:</p>
+                    <ul>
+                        <li><strong>Primeiro Dia:</strong> Linguagens, Códigos e suas Tecnologias (45 questões, incluindo 5 de língua estrangeira - inglês ou espanhol), Ciências Humanas e suas Tecnologias (45 questões) e Redação. Duração: 5 horas e 30 minutos.</li>
+                        <li><strong>Segundo Dia:</strong> Ciências da Natureza e suas Tecnologias (45 questões - Física, Química, Biologia) e Matemática e suas Tecnologias (45 questões). Duração: 5 horas.</li>
+                    </ul>
+                    <p><strong>Cadernos de Prova:</strong> Existem cadernos de cores diferentes (Azul, Amarelo, Branco, Rosa), mas as questões são as mesmas, apenas a ordem e as alternativas são embaralhadas. O que vale é o que você marca no <strong>Cartão-Resposta</strong> e escreve na <strong>Folha de Redação</strong>.</p>
+                    <p><strong>Horários Importantes:</strong> Só pode sair do local após 2 horas do início. Só pode levar o caderno de questões nos últimos 30 minutos antes do término.</p>
+                    <p>A prova é uma maratona! Treinar a resistência física e mental é crucial, especialmente para quem não tem uma rotina acadêmica recente.</p>
+
+                    <h4>Tabela 1: Estrutura do ENEM por Dia e Área do Conhecimento</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dia da Prova</th>
+                                <th>Áreas do Conhecimento</th>
+                                <th>Número de Questões</th>
+                                <th>Duração da Prova</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1º Dia</td>
+                                <td>Linguagens, Códigos e suas Tecnologias + Redação</td>
+                                <td>45 + Redação</td>
+                                <td>5 horas e 30 minutos</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Ciências Humanas e suas Tecnologias</td>
+                                <td>45</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2º Dia</td>
+                                <td>Ciências da Natureza e suas Tecnologias</td>
+                                <td>45</td>
+                                <td>5 horas</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Matemática e suas Tecnologias</td>
+                                <td>45</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    A Pontuação no ENEM: Desvendando a TRI
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <p>A nota do ENEM não é só a soma dos acertos. O sistema usa a <strong>Teoria de Resposta ao Item (TRI)</strong>.</p>
+                    <p><strong>Como funciona a TRI:</strong></p>
+                    <ul>
+                        <li>As questões são classificadas como fáceis, médias ou difíceis.</li>
+                        <li>O sistema identifica se você acertou por saber ou por "chute", olhando seu padrão de respostas. Acertar questões difíceis e errar as fáceis pode diminuir sua nota naquela questão difícil.</li>
+                        <li>Valoriza a coerência: espera-se que quem acerta difíceis, acerte as fáceis.</li>
+                        <li>Parâmetros da TRI: Dificuldade da questão, Discriminação (capacidade de diferenciar quem sabe de quem não sabe), Chance de acerto casual.</li>
+                    </ul>
+                    <p><strong>Estratégia para a TRI:</strong> Foque em acertar as questões fáceis e médias com precisão. Isso constrói uma base de conhecimento sólida e faz seus acertos em questões difíceis valerem mais.</p>
+                </div>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    Regras Essenciais para o Dia da Prova
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <p>Conhecer as regras evita problemas e até desclassificação.</p>
+                    <h4>O que LEVAR (Itens Essenciais e Permitidos) ✅</h4>
+                    <ul>
+                        <li>Documento de identificação original com foto.</li>
+                        <li>Caneta esferográfica de TINTA PRETA, fabricada em MATERIAL TRANSPARENTE.</li>
+                        <li>Água, sucos, lanches leves (frutas, biscoitos, barras de cereal) em embalagens transparentes, se possível.</li>
+                        <li>Cartão de Confirmação de Inscrição (não obrigatório, mas útil).</li>
+                    </ul>
+                    <h4>O que NÃO LEVAR (Itens Estritamente Proibidos) 🚫</h4>
+                    <ul>
+                        <li>Lápis, lapiseira, borrachas, réguas, apontadores, corretivo.</li>
+                        <li>Canetas de material não transparente.</li>
+                        <li>Calculadoras, agendas eletrônicas, celulares, tablets, SMARTWATCHES, relógios de qualquer tipo, fones de ouvido.</li>
+                        <li>Livros, manuais, anotações, impressos.</li>
+                        <li>Bonés, chapéus, óculos escuros, gorros.</li>
+                        <li>Armas de qualquer tipo.</li>
+                    </ul>
+                    <p><strong>Atenção:</strong> Celulares e outros eletrônicos devem ser desligados e guardados em envelope lacrado fornecido pelos aplicadores. Consulte sempre o edital mais recente do INEP para a lista completa!</p>
+                    <p>Para quem faz a prova pela primeira vez, conhecer esses detalhes logísticos é tão importante quanto estudar o conteúdo!</p>
+                </div>
+            </section>
+
+            <section id="como-estudar" class="content-section">
+                <h2>Superando o Desafio: Estratégias de Estudo para Quem Volta a Estudar</h2>
+                <p>Voltar a estudar depois de um tempo exige adaptação e estratégia. Nesta seção, você encontrará dicas para vencer as dificuldades comuns, como falta de concentração e organização, além de métodos de estudo eficazes para adultos e formas de manter a motivação e a disciplina ao longo da sua preparação.</p>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    Reconhecendo e Vencendo as Dificuldades Comuns
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <ul>
+                        <li>
+                            <strong>Falta de Concentração:</strong> Distrações digitais são um grande problema.
+                            <ul>
+                                <li>Soluções: Crie um espaço de estudo dedicado e tranquilo. Use fones para bloquear ruídos. Deixe o celular longe e defina horários para checá-lo.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Dificuldade em Organizar o Conteúdo:</strong> O edital é extenso.
+                            <ul>
+                                <li>Solução: Use um Plano de Estudos para cobrir tudo no tempo certo, focando no mais importante.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Falta de Foco e Procrastinação:</strong> Perder o objetivo de vista.
+                            <ul>
+                                <li>Soluções: Estabeleça uma rotina com horários para tarefas e estudos. Crie listas de tarefas e marque o que concluir. Foque em uma atividade por vez.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Conciliar Trabalho/Responsabilidades com Estudo:</strong> Um grande desafio.
+                            <ul>
+                                <li>Soluções: Comece a preparação o quanto antes. Adapte planos de estudo ao seu tempo. Se estiver cansado após o trabalho, tente estudar mais cedo. Organize sua rotina diária.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Para quem volta a estudar, otimizar os hábitos de estudo é tão crucial quanto dominar o conteúdo!</p>
+                </div>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    Métodos de Estudo Eficazes para Adultos
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <h4>Técnicas de Organização e Rotina:</h4>
+                    <ul>
+                        <li><strong>Ambiente Tranquilo e Organizado:</strong> Essencial para concentração.</li>
+                        <li><strong>Cronograma de Estudos:</strong> Saiba o que estudar a cada dia/hora.</li>
+                        <li><strong>Lista de Tarefas:</strong> Acompanhe o progresso e alivie a mente.</li>
+                        <li><strong>Gerenciamento de Energia:</strong> Descanse, durma bem, faça pausas.</li>
+                        <li><strong>Estudo Além dos Livros:</strong> Use músicas, filmes, documentários.</li>
+                    </ul>
+                    <h4>Técnicas de Memorização e Compreensão:</h4>
+                    <p>A sensação de "não lembro mais de nada" pode ser superada combinando técnicas:</p>
+                    <h4>Tabela 3: Resumo de Técnicas de Estudo e Memorização para Adultos</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Técnica</th>
+                                <th>Breve Descrição</th>
+                                <th>Benefício Principal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pomodoro</td>
+                                <td>Estudo focado por 25 min, seguido de 5 min de descanso.</td>
+                                <td>Aumenta o foco e a produtividade.</td>
+                            </tr>
+                            <tr>
+                                <td>Repetição Espaçada</td>
+                                <td>Revisão de conteúdo em intervalos de tempo crescentes.</td>
+                                <td>Solidifica a memória de longo prazo.</td>
+                            </tr>
+                            <tr>
+                                <td>Método Loci</td>
+                                <td>Associação de informações a lugares familiares.</td>
+                                <td>Facilita a recuperação de dados.</td>
+                            </tr>
+                            <tr>
+                                <td>Mapas Mentais</td>
+                                <td>Diagramas visuais com ideias principais e conexões.</td>
+                                <td>Organiza ideias e melhora a compreensão.</td>
+                            </tr>
+                            <tr>
+                                <td>Autoexplicação</td>
+                                <td>Explicar o conteúdo a si mesmo ou a outros.</td>
+                                <td>Aprofunda a compreensão e identifica lacunas.</td>
+                            </tr>
+                            <tr>
+                                <td>Mnemônicos</td>
+                                <td>Uso de acrônimos, frases ou músicas para memorizar. Ex: "Pega Minha Amiga Teresa" para fases da Mitose.</td>
+                                <td>Auxilia na recordação de informações difíceis.</td>
+                            </tr>
+                            <tr>
+                                <td>Flashcards</td>
+                                <td>Cartões com pergunta na frente e resposta no verso para revisão ativa.</td>
+                                <td>Otimiza a revisão e o teste de conhecimento.</td>
+                            </tr>
+                             <tr>
+                                <td>Resumos e Fichas</td>
+                                <td>Escrever com as próprias palavras.</td>
+                                <td>Revisão e retenção.</td>
+                            </tr>
+                            <tr>
+                                <td>Estudo Intercalado</td>
+                                <td>Alternar entre diferentes matérias ou tópicos.</td>
+                                <td>Previne fadiga mental e reforça o aprendizado.</td>
+                            </tr>
+                            <tr>
+                                <td>Prática Distribuída</td>
+                                <td>Estudar um pouco a cada dia em vez de acumular.</td>
+                                <td>Mais eficiente para a retenção a longo prazo.</td>
+                            </tr>
+                            <tr>
+                                <td>Releitura e Marcação</td>
+                                <td>Focar em partes sublinhadas ou destacadas.</td>
+                                <td>Fixa pontos importantes.</td>
+                            </tr>
+                            <tr>
+                                <td>Interrogação Elaborativa</td>
+                                <td>Criar explicações para justificar fatos.</td>
+                                <td>Absorção mais eficiente.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Experimente e combine essas técnicas para encontrar o que funciona melhor para você!</p>
+                </div>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    Dicas Práticas para Manter a Motivação e a Disciplina
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <ul>
+                        <li><strong>Disciplina acima de Horários Fixos:</strong> Regularidade é mais importante que horários inflexíveis. Crie uma rotina adaptável.</li>
+                        <li><strong>Estudar por Prazer:</strong> Veja o estudo como uma chance de aprender e crescer, não só uma obrigação. Cultive a curiosidade.</li>
+                        <li><strong>Não Haverá um "Momento Certo":</strong> Comece e mantenha a rotina, mesmo sem se sentir "pronto". Consistência é a chave.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="o-que-estudar" class="content-section">
+                <h2>O Que Estudar: Conteúdo Baseado em Provas Anteriores</h2>
+                <p>Saber onde focar seus estudos é essencial para otimizar o tempo. Esta seção detalha os temas mais recorrentes nas provas anteriores do ENEM para Linguagens, Ciências Humanas e Redação, ajudando você a direcionar sua preparação de forma mais eficiente e estratégica.</p>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    Linguagens, Códigos e suas Tecnologias
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <p>Foco em interpretação de texto e análise de diferentes linguagens.</p>
+                    <h4>Temas Mais Recorrentes em Linguagens (com % aproximada)</h4>
+                    <div class="chart-container my-6">
+                        <canvas id="linguagensChart"></canvas>
+                    </div>
+                    <p><strong>Interpretação de Texto (37,3%):</strong> Cerne da prova. Compreensão de mensagens em diversos gêneros (artigos, literatura, charges, gráficos).
+                        <ul><li><em>Exemplo Prático:</em> Leia o comando da questão ANTES do texto longo para direcionar a leitura. Responda "de acordo com o texto", sem opiniões pessoais.</li></ul>
+                    </p>
+                    <p><strong>Literatura e Estrutura do Texto Literário (20,7%):</strong> Foco em escolas literárias brasileiras.
+                        <ul><li><em>Modernismo na Literatura Brasileira (1922-1980):</em> Muito cobrado. Características: versos livres, humor, cotidiano, linguagem inovadora, nacionalismo.
+                            <ul>
+                                <li>1ª Fase (Heroica - 1922-1930): Ruptura, vanguardas europeias. Oswald e Mário de Andrade.</li>
+                                <li>2ª Fase (Consolidação - 1930-1945): Prosa nacionalista/regionalista, denúncia social. Graciliano Ramos, Drummond.</li>
+                                <li>3ª Fase (Geração de 45 - 1945-1980): Formas eruditas, foco social/humano. Guimarães Rosa, Clarice Lispector.</li>
+                            </ul>
+                        </li></ul>
+                    </p>
+                    <p><strong>Língua, Linguagem e Tecnologia da Informação (14,1%):</strong> Impactos da globalização e tecnologia na sociedade e comunicação.</p>
+                    <p><strong>Artes, Cultura e Identidade (12,3%):</strong> Obras artísticas, movimentos culturais (vanguardas europeias, arte clássica).</p>
+                    <p><strong>Variantes Linguísticas (9,1%):</strong> Modos de falar, gírias, preconceito linguístico.</p>
+                    <p><strong>Outros Temas:</strong> Saúde, Preconceito, Lutas Sociais, Gramática (básica, figuras de linguagem), Linguística Moderna (gêneros textuais).</p>
+
+                    <h4>Tabela 4: Temas Mais Recorrentes em Linguagens, Códigos e suas Tecnologias</h4>
+                     <table>
+                        <thead>
+                            <tr>
+                                <th>Tema</th>
+                                <th>% Aproximada da Prova (base 2015)</th>
+                                <th>Dicas de Estudo/Foco</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Interpretação de Texto</td>
+                                <td>37,3%</td>
+                                <td>Praticar leitura crítica de diversos gêneros; ler o comando da questão antes do texto.</td>
+                            </tr>
+                            <tr>
+                                <td>Literatura e Estrutura do Texto Literário</td>
+                                <td>20,7%</td>
+                                <td>Focar em escolas literárias brasileiras (Modernismo); relacionar obras a contextos históricos e sociais.</td>
+                            </tr>
+                            <tr>
+                                <td>Língua, Linguagem e Tecnologia da Informação</td>
+                                <td>14,1%</td>
+                                <td>Entender impactos da globalização e tecnologia na comunicação e sociedade.</td>
+                            </tr>
+                            <tr>
+                                <td>Artes, Cultura e Identidade</td>
+                                <td>12,3%</td>
+                                <td>Analisar obras e movimentos artísticos (vanguardas europeias, arte clássica); compreender o contexto cultural.</td>
+                            </tr>
+                            <tr>
+                                <td>Variantes Linguísticas</td>
+                                <td>9,1%</td>
+                                <td>Estudar modos de falar, gírias, preconceito linguístico e adequação da linguagem.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    Ciências Humanas e suas Tecnologias
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <p>Abrange História, Geografia, Filosofia e Sociologia. Exige compreensão ampla e conexão com atualidades.</p>
+                    <h4>Temas Mais Recorrentes por Disciplina:</h4>
+                    <ul>
+                        <li><strong>História:</strong>
+                            <ul>
+                                <li>Era Vargas (1930-1945): Centralização do poder, política trabalhista (CLT), propaganda (DIP). Divisões: Gov. Provisório (Constituição de 1934 com voto feminino), Gov. Constitucional, Estado Novo (ditatorial).</li>
+                                <li>Segundo Reinado, Ditadura Militar, Grécia e Roma Antiga, Nazismo e Fascismo, Colonização do Brasil.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Geografia:</strong>
+                            <ul>
+                                <li>Questões Ambientais (poluição, desmatamento, sustentabilidade).</li>
+                                <li>Urbanização: Crescimento das cidades no Brasil (industrialização, êxodo rural). Consequências: macrocefalia, problemas ambientais urbanos, segregação, favelização, trabalho informal.</li>
+                                <li>Globalização, Agropecuária, Industrialização, Fases do Capitalismo.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Filosofia:</strong> Filosofia Pré-Socrática, Filosofia Moderna (Descartes, Locke, Rousseau), Ética, Escola de Frankfurt, Filosofia Medieval.</li>
+                        <li><strong>Sociologia:</strong> Mundo do Trabalho, Ideologia, Cultura e Indústria Cultural, Cidadania, Movimentos Sociais, Política, Estado e Governo.</li>
+                    </ul>
+                    <p>Mantenha-se atualizado e pratique interpretação de textos, gráficos e mapas. Conecte fatos históricos e sociais com o presente.</p>
+
+                    <h4>Tabela 5: Temas Mais Recorrentes em Ciências Humanas e suas Tecnologias por Disciplina</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Disciplina</th>
+                                <th>Temas Mais Recorrentes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>História</strong></td>
+                                <td>Era Vargas, Segundo Reinado, Ditadura Militar, Grécia e Roma Antiga, Nazismo e Fascismo, Colonização do Brasil.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Geografia</strong></td>
+                                <td>Questões Ambientais, Urbanização, Globalização, Agropecuária, Industrialização, Fases do Capitalismo.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Filosofia</strong></td>
+                                <td>Filosofia Pré-Socrática, Filosofia Moderna, Ética, Escola de Frankfurt, Filosofia Medieval.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sociologia</strong></td>
+                                <td>Mundo do Trabalho, Ideologia, Cultura e Indústria Cultural, Cidadania, Movimentos Sociais, Política, Estado e Governo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                     <p class="mt-4 italic text-sm text-slate-600"><strong>Nota sobre Interpretação de Texto:</strong> É uma habilidade crucial em TODAS as áreas. Pratique muito!</p>
+                </div>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    A Redação do ENEM
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <p>Vale de 0 a 1000 pontos. É um texto dissertativo-argumentativo sobre tema social, científico, cultural ou político.</p>
+                    <h4>Avaliação (5 Competências):</h4>
+                    <ol class="list-decimal">
+                        <li>Domínio da norma padrão da língua portuguesa.</li>
+                        <li>Compreensão da proposta de redação.</li>
+                        <li>Organização e defesa das ideias (argumentação).</li>
+                        <li>Uso de mecanismos linguísticos para argumentação.</li>
+                        <li>Elaboração de proposta de intervenção (solução para o problema, respeitando direitos humanos).</li>
+                    </ol>
+                    <h4>Dicas para um Bom Texto:</h4>
+                    <ul>
+                        <li><strong>Leia o Tema Primeiro:</strong> No início da prova, leia o tema da redação e textos de apoio. Deixe as ideias amadurecerem.</li>
+                        <li><strong>Alocação de Tempo:</strong> Dedique 60 a 90 minutos (leitura, rascunho, escrita, revisão, transcrição).</li>
+                        <li><strong>Proposta de Intervenção Detalhada:</strong> Agente, ação, meio, finalidade. Respeite os direitos humanos.</li>
+                        <li><strong>Pratique Regularmente:</strong> Escreva sobre temas variados, peça feedback.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="treinando-prova" class="content-section">
+                <h2>Treinando para a Prova: Estratégias e Gestão do Tempo</h2>
+                <p>A preparação vai além do conteúdo; é preciso treinar para o dia D! Esta seção aborda como usar provas anteriores e simulados, estratégias eficazes para resolver as questões durante o exame e, crucialmente, como gerenciar seu tempo para não ser pego de surpresa.</p>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    Como Usar Provas Anteriores e Simulados
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <p>Resolver questões antigas e fazer simulados é a melhor forma de se familiarizar com a prova.</p>
+                    <ul>
+                        <li><strong>Onde Encontrar:</strong> Site oficial do INEP (para provas e gabaritos anteriores), Portal do Participante do ENEM.</li>
+                        <li><strong>Estratégias Efetivas:</strong>
+                            <ul>
+                                <li><strong>Organização:</strong> Crie um cronograma para resolver questões e simulados frequentemente.</li>
+                                <li><strong>Simulação Realista:</strong> Faça simulados nas mesmas condições do exame (tempo, silêncio, sem distrações). Isso ajuda a entender seu ritmo e gerenciar a pressão.</li>
+                                <li><strong>Revisão Detalhada:</strong> Após cada simulado, revise erros e fraquezas. Entenda o raciocínio das respostas corretas.</li>
+                                <li><strong>Análise TRI (se possível):</strong> Use plataformas com correção TRI para ter uma estimativa mais precisa do desempenho.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>A simulação realista é vital para diagnóstico e adaptação, especialmente para quem está se reacostumando ao ambiente de prova.</p>
+                </div>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    Estratégias para Resolver as Questões no Dia da Prova
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <ul>
+                        <li><strong>Leitura Atenta:</strong> Dedique os primeiros minutos para ler instruções, divisão das questões e tema da redação. Para textos longos, leia o comando da questão PRIMEIRO.</li>
+                        <li><strong>Estratégia da "Prova em Camadas" ("Varrer a Prova"):</strong>
+                            <ol>
+                                <li><strong>1ª Camada (Fácil):</strong> Comece pelas mais fáceis ou que domina. Garante pontos e confiança.</li>
+                                <li><strong>2ª Camada (Médio):</strong> Volte às questões de dificuldade média.</li>
+                                <li><strong>3ª Camada (Difícil):</strong> Por último, as mais difíceis ou demoradas.</li>
+                            </ol>
+                            Essa abordagem otimiza o tempo e alinha-se com a TRI.
+                        </li>
+                        <li><strong>Não Insistir em Questões:</strong> Se uma questão travar, pule e volte depois. Máximo de 3 minutos por questão na primeira passada.</li>
+                        <li><strong>"Chutar" Conscientemente:</strong> Se precisar chutar, elimine opções incorretas ou que contradizem o comando/direitos humanos. Desconfie de termos absolutos ("sempre", "nunca") em Humanas.</li>
+                    </ul>
+                </div>
+
+                <button class="accordion-button w-full text-left px-4 py-3 bg-slate-200 hover:bg-slate-300 rounded-md font-semibold text-slate-700 flex justify-between items-center mb-1">
+                    Gestão do Tempo no Dia da Prova
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-slate-50 p-4 rounded-b-md mb-4">
+                    <ul>
+                        <li><strong>Alocação de Tempo:</strong>
+                            <ul>
+                                <li><strong>1º Dia (5h30min):</strong> 60-90 min para redação. Restante (aprox. 4h30min) para 90 questões objetivas (média de 3 min/questão).</li>
+                                <li><strong>2º Dia (5h):</strong> 90 questões objetivas (média de 3 min e 20 seg/questão).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Inicie pela Redação (ou pelo menos o tema):</strong> Permite que o cérebro processe ideias enquanto resolve outras questões.</li>
+                        <li><strong>Faça Pausas Estratégicas:</strong> Coma, beba água, vá ao banheiro, olhe para longe para "reiniciar" a mente.</li>
+                        <li><strong>Preencher o Cartão-Resposta com Calma:</strong> Reserve 15-20 minutos no final. Evite pressa e erros. O cartão não pode ser borrado ou substituído.</li>
+                        <li><strong>Prática com Técnica Pomodoro (nos estudos):</strong> Ajuda a treinar foco e ritmo.</li>
+                        <li><strong>Cuidado com a Saúde:</strong> Durma bem, alimente-se levemente, mantenha a calma.</li>
+                    </ul>
+                    <p>Internalize essas estratégias com prática contínua para que se tornem automáticas no dia do exame.</p>
+                </div>
+            </section>
+
+            <section id="conclusao" class="content-section">
+                <h2>Conclusão: Rumo ao Seu Objetivo!</h2>
+                <p>A jornada de preparação para o ENEM, especialmente para quem retorna aos estudos, é uma maratona que exige persistência, planejamento e, acima de tudo, consistência. Este guia interativo foi criado com o intuito de ser seu companheiro, oferecendo um roteiro claro e detalhado para cada etapa.</p>
+                <p>Lembre-se que o caminho para o sucesso não é uma linha reta, mas com dedicação às técnicas de estudo, um planejamento cuidadoso do conteúdo e a prática constante das habilidades de prova, você estará muito bem preparado(a). Sua experiência de vida é um trunfo valioso, trazendo uma perspectiva única para as questões.</p>
+                <p>A disciplina, combinada com as estratégias apresentadas aqui, será sua maior aliada. Acredite no seu potencial, siga seu plano e vá com confiança para realizar uma excelente prova. Boa sorte!</p>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-10 md:mt-12 py-6 border-t border-slate-300">
+            <p class="text-sm text-slate-500">&copy; <span id="currentYear"></span> Guia Interativo ENEM. Feito para te ajudar a conquistar seus sonhos!</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

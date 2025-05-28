@@ -1,0 +1,155 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F3F4F6; /* bg-slate-100 */
+    color: #1F2937; /* text-slate-800 */
+}
+.content-section {
+    display: none;
+    background-color: white;
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+.content-section.active {
+    display: block;
+}
+.nav-button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+.nav-button.active {
+    background-color: #2563EB; /* bg-blue-600 */
+    color: white;
+}
+.accordion-button svg {
+    transition: transform 0.3s ease;
+}
+.accordion-button.active svg {
+    transform: rotate(180deg);
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+/* Chart container styling is crucial for responsiveness */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Default max-width to prevent chart from being too wide */
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px; /* Base height, adjust as needed */
+    max-height: 400px; /* Max height to prevent vertical overflow */
+}
+/* Responsive adjustments for chart container */
+@media (min-width: 640px) { /* sm breakpoint */
+    .chart-container {
+        height: 350px;
+    }
+}
+@media (min-width: 768px) { /* md breakpoint */
+    .chart-container {
+        max-width: 700px; /* Slightly wider on medium screens */
+        height: 380px;
+    }
+}
+ @media (min-width: 1024px) { /* lg breakpoint */
+    .chart-container {
+        max-width: 800px; /* Wider on large screens */
+        height: 400px;
+    }
+}
+
+h1 { color: #1E3A8A; /* text-blue-800 */ }
+h2 { font-size: 1.75rem; font-weight: 600; margin-bottom: 1.25rem; margin-top:1rem; color: #1E40AF; /* text-blue-700 */ }
+h3 { font-size: 1.35rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1D4ED8; /* text-blue-600 */ }
+h4 { font-size: 1.15rem; font-weight: 600; margin-top: 1.25rem; margin-bottom: 0.5rem; color: #2563EB; /* text-blue-500 */ }
+p, li { line-height: 1.7; margin-bottom: 0.85rem; color: #374151; /* text-slate-700 */ }
+ul { list-style-position: outside; padding-left: 1.25rem; }
+li::marker { color: #60A5FA; /* text-blue-400 */ }
+table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; }
+th, td { border: 1px solid #E5E7EB; /* border-slate-300 */ padding: 0.85rem; text-align: left; }
+th { background-color: #F9FAFB; /* bg-slate-50 */ font-weight: 600; color: #111827; /* text-slate-900 */ }
+
+/* --- Media Queries para Telas Menores --- */
+
+/* Pequenas telas (smartphones, até 639px de largura, o que seria 'sm' no Tailwind) */
+@media (max-width: 639px) {
+    .container {
+        padding: 0.75rem; /* Menos padding em telas muito pequenas */
+    }
+
+    h1 {
+        font-size: 2.25rem; /* H1 um pouco menor em celulares */
+    }
+
+    h1 span {
+        font-size: 1.5rem; /* Ajuste para o emoji/span dentro do h1 */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* H2 menor */
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.2rem; /* H3 menor */
+    }
+
+    h4 {
+        font-size: 1rem; /* H4 menor */
+    }
+
+    p, li, th, td {
+        font-size: 0.9rem; /* Tamanho de fonte ligeiramente menor para o texto geral */
+    }
+
+    .nav-button {
+        padding: 0.6rem 0.8rem; /* Padding menor para botões de navegação */
+        font-size: 0.75rem; /* Fonte menor para botões de navegação */
+    }
+
+    .nav-container {
+        padding: 0.5rem; /* Padding reduzido para a barra de navegação */
+        /* O overflow-x: auto e white-space: nowrap já estão lá para garantir rolagem */
+    }
+
+    /* Ajuste para o accordion button em telas pequenas */
+    .accordion-button {
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+    }
+    .accordion-button svg {
+        min-width: 1.25rem; /* Garante que o ícone não encolha demais */
+        min-height: 1.25rem;
+    }
+}
+
+/* Telas muito pequenas (ex: iPhones antigos, até 374px de largura) */
+@media (max-width: 374px) {
+    .nav-button {
+        padding: 0.5rem 0.6rem; /* Padding ainda menor para botões em telas minúsculas */
+        font-size: 0.7rem; /* Fonte ainda menor */
+    }
+     .nav-container {
+        padding: 0.3rem; /* Padding mínimo para a barra de navegação */
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Rolagem horizontal na navegação para garantir que todos os botões sejam visíveis */
+.nav-container {
+    overflow-x: auto; /* Permite rolagem horizontal para muitos botões em telas pequenas */
+    -webkit-overflow-scrolling: touch; /* Rolagem suave no iOS */
+}
+.nav-container::-webkit-scrollbar {
+    height: 4px; /* Altura da barra de rolagem */
+}
+.nav-container::-webkit-scrollbar-thumb {
+    background: #9CA3AF; /* Cor da barra de rolagem */
+    border-radius: 10px;
+}
